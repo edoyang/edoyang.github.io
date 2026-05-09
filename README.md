@@ -1,12 +1,60 @@
-# React + Vite
+# Edoardo - Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A personal portfolio website showcasing my work as a Full Stack Developer. Built with React and Vite.
 
-Currently, two official plugins are available:
+## Live Site
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+[edoyang.com](https://edoyang.com)
 
-## Expanding the ESLint configuration
+## Sections
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Hero** - Introduction and downloadable CV
+- **About** - Tech stack overview (frontend, backend, and other tools)
+- **Experiences** - Work history and achievements
+- **Projects** - Featured projects with live demos and repository links
+
+## Tech Stack
+
+- React 19
+- Vite 7
+- Sass
+- React Router
+- GitHub Pages (deployment)
+
+## Getting Started
+
+```bash
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+# Build for production
+npm run build
+
+# Deploy to GitHub Pages
+npm run deploy
+```
+
+## Project Structure
+
+```
+src/
+├── assets/            # JSON data (projects, experiences, tech stacks)
+├── components/
+│   ├── About/         # Tech stacks display
+│   ├── Experiences/   # Work experience timeline
+│   ├── Footer/        # Footer with contact links
+│   ├── Header/        # Navigation bar
+│   ├── Hero/          # Landing section
+│   └── Project/       # Project showcase grid
+├── App.jsx
+└── main.jsx
+```
+
+## Contact
+
+- [LinkedIn](https://www.linkedin.com/in/edoyang/)
+- [GitHub](https://github.com/edoyang)
+- [Email](mailto:edoyangz@gmail.com)
