@@ -15,10 +15,8 @@ function App() {
         <section id="about">
           <h2>About Me</h2>
           <p>
-            Software engineer and full stack developer, originally from Bogor
-            (West Java) and Pontianak (West Kalimantan) in Indonesia, and
-            currently living in Sydney CBD, Australia. Passionate about creating
-            modern web applications with clean code and great user experiences.
+            Full Stack Developer passionate about creating modern web
+            applications with clean code and great user experiences.
           </p>
           <About />
         </section>
