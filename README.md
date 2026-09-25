@@ -4,7 +4,7 @@ A personal portfolio website showcasing my work as a Full Stack Developer. Built
 
 ## Live Site
 
-[edoyang.com](https://edoyang.com)
+[edoyang.github.io](https://edoyang.github.io)
 
 ## Sections
 
@@ -32,10 +32,11 @@ npm run dev
 
 # Build for production
 npm run build
-
-# Deploy to GitHub Pages
-npm run deploy
 ```
+
+## Deployment
+
+Every push to `main` on [edoyang/edoyang.github.io](https://github.com/edoyang/edoyang.github.io) builds the site with GitHub Actions and publishes it to GitHub Pages at [edoyang.github.io](https://edoyang.github.io).
 
 ## Project Structure
 

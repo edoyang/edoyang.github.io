@@ -34,17 +34,23 @@ function Project() {
 
             <div className="availability">
               {project.links.demo && (
-                <a href={project.links.demo} target="_blank">
+                <a
+                  href={project.links.demo}
+                  target="_blank"
+                  rel="noopener noreferrer">
                   <button className="btn-secondary">
-                    <img src="/icons/link.svg" alt="link icon" />
+                    <img src="/icons/link.svg" alt="" />
                     Live Demo
                   </button>
                 </a>
               )}
               {project.links.repository && (
-                <a href={project.links.repository} target="_blank">
+                <a
+                  href={project.links.repository}
+                  target="_blank"
+                  rel="noopener noreferrer">
                   <button className="btn-primary">
-                    <img src="/tech-stacks/github.svg" alt="link icon" />
+                    <img src="/tech-stacks/github.svg" alt="" />
                     View Repository
                   </button>
                 </a>

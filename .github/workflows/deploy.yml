@@ -25,6 +25,11 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run build
+      - name: Stamp build date into sitemap and JSON-LD
+        run: |
+          D=$(date -u +%Y-%m-%d)
+          sed -i "s#<lastmod>[^<]*</lastmod>#<lastmod>$D</lastmod>#" dist/sitemap.xml
+          sed -i "s#\"dateModified\": \"[^\"]*\"#\"dateModified\": \"$D\"#" dist/index.html
       - name: SPA fallback
         run: cp dist/index.html dist/404.html
       - uses: actions/configure-pages@v5

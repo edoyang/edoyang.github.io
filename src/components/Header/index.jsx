@@ -53,11 +53,19 @@ const Header = () => {
         <button onClick={() => scrollToSection("projects")}>Projects</button>
       </div>
       <div className="social">
-        <a href="https://www.linkedin.com/in/edoyang/" target="_blank">
-          <img src="/icons/linkedin.svg" alt="linkedin icon" />
+        <a
+          href="https://www.linkedin.com/in/edoyang/"
+          target="_blank"
+          rel="me noopener noreferrer"
+          aria-label="Edoardo on LinkedIn">
+          <img src="/icons/linkedin.svg" alt="" />
         </a>
-        <a href="https://github.com/edoyang" target="_blank">
-          <img src="/tech-stacks/github.svg" alt="github icon" />
+        <a
+          href="https://github.com/edoyang"
+          target="_blank"
+          rel="me noopener noreferrer"
+          aria-label="Edoardo on GitHub">
+          <img src="/tech-stacks/github.svg" alt="" />
         </a>
         <div
           className={`hamburger ${isMenuOpen ? "active" : ""}`}

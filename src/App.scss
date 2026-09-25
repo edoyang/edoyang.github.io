@@ -38,8 +38,24 @@ main {
     flex-direction: column;
     gap: 2rem;
 
+    .eyebrow {
+      font-size: var(--font-16);
+      font-weight: 600;
+      color: var(--text-secondary);
+      text-align: center;
+      text-wrap: balance;
+    }
+
     h1 {
       font-size: var(--font-40);
+      text-align: center;
+      text-wrap: balance;
+    }
+
+    h2 {
+      font-size: var(--font-32);
+      font-weight: 600;
+      color: var(--text-secondary);
       text-align: center;
       text-wrap: balance;
     }
@@ -79,6 +95,11 @@ main {
         }
       }
     }
+  }
+
+  > #about h2,
+  > #projects h2 {
+    font-size: 2em;
   }
 
   > #about {

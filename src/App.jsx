@@ -13,10 +13,12 @@ function App() {
       <main>
         <Hero />
         <section id="about">
-          <h1>About Me</h1>
+          <h2>About Me</h2>
           <p>
-            Full Stack Developer passionate about creating modern web
-            applications with clean code and great user experiences.
+            Software engineer and full stack developer, originally from Bogor
+            (West Java) and Pontianak (West Kalimantan) in Indonesia, and
+            currently living in Sydney CBD, Australia. Passionate about creating
+            modern web applications with clean code and great user experiences.
           </p>
           <About />
         </section>
@@ -24,7 +26,7 @@ function App() {
         <Experiences />
 
         <section id="projects">
-          <h1 className="title">Featured work</h1>
+          <h2 className="title">Featured work</h2>
           <p className="description">
             Showcasing some of my projects and technical achievements
           </p>
