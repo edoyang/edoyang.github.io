@@ -6,7 +6,7 @@ const Hero = () => {
       <h1>Building Scalable & Engaging Web Experiences</h1>
 
       <p>
-        Hey there! I'm Edoardo,a Full Stack Developer who loves building cool
+        Hey there! I'm Edoardo, a Full Stack Developer who loves building cool
         and scalable web experiences. From crafting beautiful frontends to
         powering robust backends, I bring ideas to life with clean code and
         great design. Let's create something amazing together!
