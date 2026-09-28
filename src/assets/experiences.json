@@ -8,11 +8,14 @@
     "role": "Software Engineer",
     "duration": "Mar 2025 - Present",
     "achievements": [
-      "Built a 6-DOF VR prototype app with Unity, .NET, and MySQL in Azure environment.",
-      "Researched and integrated AI tools (TRELLIS, MeshyAI, Hunyuan, Flux-Panorama) for automated 3D/360° content generation.",
-      "Redesigned company website with modern stacks, reducing costs by ~95%.",
-      "Created 3D models in Blender/Unity and integrated legacy apps with APIs (ChatGPT, MeshyAI).",
-      "Developed ST4S cybersecurity documentation and presented at team & edu-fest events."
+      "Built and shipped the company's VR classroom platform end to end: a React web app, a Node.js and Express API, MySQL and Blob Storage on Azure, and Unity apps for PICO, DPVR, HTC and SteamVR headsets.",
+      "Created a browser based 3DOF and 6DOF scene editor with Three.js, where teachers place 3D models, hotspots and teleport points, then publish straight to headsets.",
+      "Developed live class sessions over WebSockets: the teacher leads from the web while student headsets follow the scene, with follow, lock view and lock experiment modes.",
+      "Made large content transfers reliable with resumable chunked downloads (HTTP Range and IndexedDB), and sped up the content library with streaming reads and infinite scroll.",
+      "Designed self hosted AI services on Modal (Qwen on vLLM, 360° panorama and 3D generators) and integrated TRELLIS, MeshyAI, Hunyuan and Flux-Panorama for automated content generation.",
+      "Hardened sign in, tenant isolation and rate limiting across a multi school platform, wrote the ST4S cybersecurity documentation and presented it at team and edu-fest events.",
+      "Cut running costs: rebuilt the company website on a modern stack (about 95% cheaper to run) and automated the start and stop of staging infrastructure on Azure.",
+      "Shipped accessibility features (font scaling and a high contrast theme) across the app, and prototyped an AI tutor avatar with lip sync and a tool that turns a lesson brief into a VR simulation."
     ]
   },
   {

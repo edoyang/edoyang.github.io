@@ -1,11 +1,21 @@
 import experiencesData from "../../assets/experiences.json";
 
+// A role that is still running gets the pulsing marker.
+const isCurrent = (experience) => /present/i.test(experience.duration);
+
+// The timeline ends where the oldest role began.
+const startDate = experiencesData.at(-1)?.duration.split(" - ")[0];
+
 const Experiences = () => {
   return (
     <section id="experiences">
       {experiencesData.map((experience) => (
-        <div key={experience.id} className="experience">
-          <div className="dot"></div>
+        <div
+          key={experience.id}
+          className={`experience${isCurrent(experience) ? " current" : ""}`}>
+          <div className="dot" aria-hidden="true">
+            <span className="orb"></span>
+          </div>
           <div className="details">
             <div className="company">
               <div className="image-logo-office">
@@ -21,6 +31,9 @@ const Experiences = () => {
               <p>
                 <img src="/icons/calendar.svg" alt="calendar icon" />
                 {experience.duration}
+                {isCurrent(experience) && (
+                  <span className="current-badge">Current</span>
+                )}
               </p>
               <ul>
                 {experience.achievements.map((achievement, index) => (
@@ -31,6 +44,16 @@ const Experiences = () => {
           </div>
         </div>
       ))}
+
+      <div className="experience start">
+        <div className="dot" aria-hidden="true">
+          <span className="orb"></span>
+        </div>
+        <div className="details">
+          <h3>Where it started</h3>
+          <p>{startDate}</p>
+        </div>
+      </div>
     </section>
   );
 };

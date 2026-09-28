@@ -75,5 +75,16 @@
       "demo": "https://freshcart-client.vercel.app/",
       "repository": "https://github.com/edoyang/freshcart"
     }
+  },
+  {
+    "id": 8,
+    "title": "Kainvara",
+    "description": "Kainvara is a full stack fashion store built from a Figma UI kit with React, TypeScript, Express and MongoDB. It covers the whole shopping journey: search and filters, product options and reviews, a cart and wishlist that follow the account, discount codes, checkout with stock reservation, card payment through Stripe Checkout, order history and an admin area for products and orders. The API runs as a single serverless function on Vercel, with a scheduled job that keeps the database active. Security was a focus throughout, with httpOnly sessions, server side pricing, input validation and rate limiting.",
+    "category": "E-Commerce",
+    "technologies": ["React", "TypeScript", "Express", "MongoDB", "Stripe"],
+    "links": {
+      "demo": "https://kainvara.vercel.app/",
+      "repository": "https://github.com/edoyang/kainvara"
+    }
   }
 ]

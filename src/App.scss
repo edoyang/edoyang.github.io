@@ -158,35 +158,108 @@ main {
       width: 100%;
       height: 100%;
       padding-left: 32px;
+
+      // Every marker sits level with the middle of the 50px company row,
+      // and the line runs from one marker to the next.
       .dot {
+        --marker-y: 25px;
         position: absolute;
         left: 0;
         top: 0;
         width: 16px;
         height: 100%;
 
-        &::before,
-        &::after {
+        &::before {
+          content: "";
           position: absolute;
           left: 50%;
+          top: var(--marker-y);
           transform: translateX(-50%);
-          top: 16px;
-          content: "";
-        }
-
-        &::before {
           width: 3px;
-          background-color: var(--background-secondary);
           height: calc(100% + 2rem);
+          border-radius: 3px;
+          background-color: var(--light-gray);
         }
 
-        &::after {
-          width: 10px;
+        .orb {
+          position: absolute;
+          left: 50%;
+          top: var(--marker-y);
+          transform: translate(-50%, -50%);
+          width: 12px;
           aspect-ratio: 1/1;
           border-radius: 50%;
-          border: 2px solid var(--border-primary);
-          background-color: var(--background-primary);
+          background-color: var(--text-primary);
+          // A white collar keeps the line from touching the marker.
+          box-shadow: 0 0 0 4px var(--background-primary);
         }
+      }
+
+      // The role that is still running: a blue orb with a slow pulse.
+      &.current .dot {
+        &::before {
+          background: linear-gradient(
+            to bottom,
+            var(--accent-blue),
+            var(--light-gray) 70%
+          );
+        }
+
+        .orb {
+          width: 14px;
+          background-color: var(--accent-blue);
+          animation: orb-glow 2.8s ease-in-out infinite;
+
+          &::before,
+          &::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            border-radius: 50%;
+            background-color: var(--accent-blue);
+            opacity: 0;
+            animation: orb-pulse 2.8s ease-out infinite;
+          }
+
+          // A second ring, half a beat later, makes the pulse feel continuous.
+          &::after {
+            animation-delay: 1.4s;
+          }
+        }
+      }
+
+      // The last marker: where the timeline began.
+      &.start {
+        .dot {
+          &::before {
+            display: none;
+          }
+
+          .orb {
+            background-color: var(--background-primary);
+            border: 3px solid var(--text-secondary);
+          }
+        }
+
+        .details {
+          min-height: 50px;
+          justify-content: center;
+          gap: 2px;
+
+          p {
+            color: var(--text-secondary);
+          }
+        }
+      }
+
+      .current-badge {
+        margin-left: 6px;
+        padding: 2px 10px;
+        border-radius: 100px;
+        font-size: 0.8em;
+        font-weight: 600;
+        color: var(--accent-blue);
+        background-color: var(--light-blue);
       }
 
       .details {
@@ -240,10 +313,42 @@ main {
         }
       }
 
-      &:last-child {
-        .dot::before {
-          height: calc(100% - 1rem);
-        }
+    }
+  }
+
+  @keyframes orb-pulse {
+    0% {
+      transform: scale(1);
+      opacity: 0.45;
+    }
+    80%,
+    100% {
+      transform: scale(2.8);
+      opacity: 0;
+    }
+  }
+
+  @keyframes orb-glow {
+    0%,
+    100% {
+      box-shadow: 0 0 0 4px var(--background-primary), 0 0 0 0 transparent;
+    }
+    50% {
+      box-shadow: 0 0 0 4px var(--background-primary),
+        0 0 12px 2px oklch(0.588 0.158 241.966 / 0.45);
+    }
+  }
+
+  // People who ask for less motion get a still orb with a soft halo.
+  @media (prefers-reduced-motion: reduce) {
+    > #experiences .experience.current .dot .orb {
+      animation: none;
+      box-shadow: 0 0 0 4px var(--background-primary),
+        0 0 0 7px oklch(0.588 0.158 241.966 / 0.25);
+
+      &::before,
+      &::after {
+        animation: none;
       }
     }
   }
