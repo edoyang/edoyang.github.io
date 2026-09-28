@@ -3,9 +3,6 @@ import experiencesData from "../../assets/experiences.json";
 // A role that is still running gets the pulsing marker.
 const isCurrent = (experience) => /present/i.test(experience.duration);
 
-// The timeline ends where the oldest role began.
-const startDate = experiencesData.at(-1)?.duration.split(" - ")[0];
-
 const Experiences = () => {
   return (
     <section id="experiences">
@@ -50,8 +47,7 @@ const Experiences = () => {
           <span className="orb"></span>
         </div>
         <div className="details">
-          <h3>Where it started</h3>
-          <p>{startDate}</p>
+          <h3>Start</h3>
         </div>
       </div>
     </section>

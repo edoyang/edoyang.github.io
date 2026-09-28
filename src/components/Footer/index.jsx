@@ -4,8 +4,7 @@ const Footer = () => {
   return (
     <footer>
       <div className="copyright">
-        &copy; {new Date().getFullYear()} Edoardo (Edo Yang). Software Engineer
-        in Sydney, Australia.
+        &copy; {new Date().getFullYear()} Edo Yang
       </div>
 
       <div className="links">

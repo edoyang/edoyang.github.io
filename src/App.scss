@@ -197,14 +197,6 @@ main {
 
       // The role that is still running: a blue orb with a slow pulse.
       &.current .dot {
-        &::before {
-          background: linear-gradient(
-            to bottom,
-            var(--accent-blue),
-            var(--light-gray) 70%
-          );
-        }
-
         .orb {
           width: 14px;
           background-color: var(--accent-blue);
@@ -244,11 +236,6 @@ main {
         .details {
           min-height: 50px;
           justify-content: center;
-          gap: 2px;
-
-          p {
-            color: var(--text-secondary);
-          }
         }
       }
 
